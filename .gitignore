@@ -1,0 +1,22 @@
+.DS_STORE
+.vagrant
+.idea
+
+# Created by https://www.gitignore.io/api/laravel
+
+### Laravel ###
+public/local/vendor/
+public/local/node_modules/
+
+# Laravel 4 specific
+public/local/bootstrap/compiled.php
+public/local/app/storage/
+
+# Laravel 5 & Lumen specific
+public/local/bootstrap/cache/
+public/local/storage/
+public/local/.env.*.php
+public/local/.env.php
+public/local/.env
+
+
