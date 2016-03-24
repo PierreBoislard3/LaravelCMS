@@ -17,7 +17,7 @@
         <li><a href="#">Item 1</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-text">Hello, Johnny</span></li>
+        <li><span class="navbar-text">Hello, {{ $admin->name }}</span></li>
         <li><a href="{{ route('auth.logout') }}">Logout</a></li>
     </ul>
 </nav>

@@ -1,6 +1,6 @@
 <?php
 
-namespace SundaySim\View\Composers;
+namespace Cms\View\Composers;
 
 use Illuminate\View\View;
 
