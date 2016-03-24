@@ -15,8 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app['view']->composer('layouts.auth', 'layouts.backend', Composers\AddStatusMessage::class);
+        $this->app['view']->composer(['layouts.auth', 'layouts.backend'], Composers\AddStatusMessage::class);
         $this->app['view']->composer('layouts.backend', Composers\AddAdminUser::class);
+        $this->app['view']->composer('layouts.frontend', Composers\InjectPages::class);
+
         $this->app['view']->setFinder($this->app['theme.finder']);
     }
 
@@ -27,8 +29,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('theme.finder', function ($app){
+        $this->app->singleton('theme.finder', function ($app) {
             $finder = new ThemeViewFinder($app['files'], $app['config']['view.paths']);
+
             $config = $app['config']['cms.theme'];
 
             $finder->setBasePath($app['path.public'].'/'.$config['folder']);

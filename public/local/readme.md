@@ -1,27 +1,45 @@
-# Laravel PHP Framework
+# [Build a CMS With Laravel][published url]
+## Instructor: [Jason Lewis][instructor url]
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Laravel is a PHP framework for modern web apps. Recently upgraded to version 5, Laravel is a mature system that continues to win support due to its elegance and stability. Laravel ships with built-in support for database migrations, object-relational mapping, routing and authentication—making it easier for developers to start and maintain their work.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+In this course, Envato Tuts+ instructor Jason Lewis will show you how to build a functioning content management system (CMS) with the Laravel PHP framework. We'll look at some of the tasks and problems that are common to so many web development projects and explore different possible solutions to them. We'll be starting our CMS from scratch—a great way to expand your knowledge of the Laravel framework. In our case, this course will teach you the fundamentals required to develop top-notch Laravel applications.
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Source Files Description
 
-## Contributing
+This repository contains the completed project for this course—a simple content management system.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+The source for this application is mainly located within the `app` directory. Within here we have various directories each responsible for a particular piece of the application.
 
-## Security Vulnerabilities
+To get a local copy of the application working you can follow the instructions below (assuming you're on a *nix machine):
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Firt, rename the `.env.example` file to `.env`. Make any changes you need to in here such as changing the `DB_DATABASE`. Then, run the following commands from your terminal:
 
-## License
+```
+$ composer install
+$ php artisan migrate
+$ php artisan db:seed
+$ npm install
+$ gulp
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+If you'd like to use Artisan to serve your application you can run the following command:
+
+```
+$ php artisan serve
+```
+
+This will then serve the application to `localhost:8000`.
+
+Otherwise use Homestead to serve the application.
+
+------
+
+These are source files for the Tuts+ course: [Build a CMS With Laravel][published url]
+
+Available on [Tuts+](https://tutsplus.com). Teaching skills to millions worldwide.
+
+[published url]: https://code.tutsplus.com/courses/build-a-cms-with-laravel
+[instructor url]: https://tutsplus.com/authors/jason-lewis

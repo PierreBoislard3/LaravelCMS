@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title')</title>
+        <title>@yield('title') &mdash; The Sunday Sim</title>
 
-        <link rel="stylesheet" href="{{ theme('css/backend-style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ theme('css/backend.css') }}">
     </head>
     <body>
         <div class="container">
@@ -20,7 +20,8 @@
                         <div class="panel-body">
                             @if($errors->any())
                                 <div class="alert alert-danger">
-                                    <strong> We found some errors!</strong>
+                                    <strong>We found some errors!</strong>
+
                                     <ul>
                                         @foreach($errors->all() as $error)
                                             <li>{{ $error }}</li>
@@ -31,7 +32,7 @@
 
                             @if($status)
                                 <div class="alert alert-info">
-                                    {{ $status  }}
+                                    {{ $status }}
                                 </div>
                             @endif
 

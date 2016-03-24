@@ -16,16 +16,15 @@
 
     <div class="form-group">
         {!! Form::label('password') !!}
-        {!! Form::password('password', array('class' => 'form-control')) !!}
+        {!! Form::password('password', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('password_confirmation') !!}
-        {!! Form::password('password_confirmation', array('class' => 'form-control')) !!}
+        {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
     </div>
 
     {!! Form::submit('Reset Password', ['class' => 'btn btn-primary']) !!}
-
 
     {!! Form::close() !!}
 @endsection

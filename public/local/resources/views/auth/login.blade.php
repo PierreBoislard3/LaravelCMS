@@ -2,7 +2,7 @@
 
 @section('title', 'Login')
 
-@section('heading', 'Welcome, Please login.')
+@section('heading', 'Welcome, please login.')
 
 @section('content')
     {!! Form::open() !!}
@@ -11,9 +11,10 @@
         {!! Form::label('email') !!}
         {!! Form::text('email', null, ['class' => 'form-control']) !!}
     </div>
+
     <div class="form-group">
         {!! Form::label('password') !!}
-        {!! Form::password('password', array('class' => 'form-control')) !!}
+        {!! Form::password('password', ['class' => 'form-control']) !!}
     </div>
 
     {!! Form::submit('Login', ['class' => 'btn btn-primary']) !!}
