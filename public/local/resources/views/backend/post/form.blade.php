@@ -42,13 +42,9 @@
     {!! Form::close() !!}
 
     <script>
-        new SimpleMDE({
-            element: document.getElementsByName('body')[0]
-        }).render();
+        CKEDITOR.replace( 'body' );
 
-        new SimpleMDE({
-            element: document.getElementsByName('excerpt')[0]
-        }).render();
+        CKEDITOR.replace( 'excerpt' );
 
         $('input[name=published_at]').datetimepicker({
             allowInputToggle: true,

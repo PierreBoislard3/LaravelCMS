@@ -77,6 +77,6 @@
     {!! Form::close() !!}
 
     <script>
-        new SimpleMDE().render();
+        CKEDITOR.replace( 'content' );
     </script>
 @endsection

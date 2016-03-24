@@ -31,10 +31,11 @@ elixir(function(mix) {
 
     mix.copy('node_modules/simplemde/dist/simplemde.min.css', elixir.config.publicPath+'/css/simplemde.css');
     mix.copy('node_modules/simplemde/dist/simplemde.min.js', elixir.config.publicPath+'/js/simplemde.js');
+    mix.copy('node_modules/ckeditor/ckeditor.js', elixir.config.publicPath+'/js/ckeditor/ckeditor.js');
 
     mix.scripts([
         'jquery.js', 'bootstrap.js', 'moment.js',
-        'simplemde.js', 'datepicker.js'
+        'simplemde.js', 'datepicker.js', 'ckeditor/ckeditor.js'
     ]);
 
     mix.sass('backend.scss');

@@ -7,7 +7,11 @@
         <title>@yield('title') &mdash; CMS</title>
 
         <link rel="stylesheet" href="{{ theme('css/backend.css') }}">
+        <script>
+            var CKEDITOR_BASEPATH = '/local/public/themes/default/assets/js/ckeditor/';
+        </script>
         <script src="{{ theme('js/all.js') }}"></script>
+
     </head>
     <body>
         <nav class="navbar navbar-static-top navbar-inverse">
