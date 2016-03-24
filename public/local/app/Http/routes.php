@@ -10,11 +10,20 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::controller('auth/password', 'Auth\PasswordController', [
+    'getEmail' => 'auth.password.email',
+    'getReset' => 'auth.password.reset'
+]);
 
-Route::group(['middleware' => ['web']], function () {
+Route::controller('auth', 'Auth\AuthController', [
+   'getLogin' => 'auth.login',
+   'getLogout' => 'auth.logout'
+]);
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+Route::get('backend/dashboard', ['as' => 'backend.dashboard', 'uses' => 'Backend\DashboardController@index']);
 
+Route::get('/', function () {
+    return view('welcome');
 });
+
+
