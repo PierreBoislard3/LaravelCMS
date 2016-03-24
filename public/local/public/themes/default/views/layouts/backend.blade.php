@@ -17,7 +17,7 @@
                     <li><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
                     <li><a href="{{ route('backend.users.index') }}">Users</a></li>
                     <li><a href="{{ route('backend.pages.index') }}">Pages</a></li>
-                    <li><a href="{{ route('backend.blog.index') }}">Posts</a></li>
+                    <li><a href="{{ route('backend.post.index') }}">Posts</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><span class="navbar-text">Hello, {{ $admin->name }}</span></li>

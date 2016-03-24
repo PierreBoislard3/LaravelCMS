@@ -1,11 +1,11 @@
 @extends('layouts.backend')
 
-@section('title', $post->exists ? 'Editing '.$post->title : 'Create New Blog Post')
+@section('title', $post->exists ? 'Editing '.$post->title : 'Create New Post')
 
 @section('content')
     {!! Form::model($post, [
         'method' => $post->exists ? 'put' : 'post',
-        'route' => $post->exists ? ['backend.blog.update', $post->id] : ['backend.blog.store']
+        'route' => $post->exists ? ['backend.post.update', $post->id] : ['backend.post.store']
     ]) !!}
 
     <div class="form-group">
@@ -37,7 +37,7 @@
         {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
     </div>
 
-    {!! Form::submit($post->exists ? 'Save Post' : 'Create New Blog Post', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit($post->exists ? 'Save Post' : 'Create New Post', ['class' => 'btn btn-primary']) !!}
 
     {!! Form::close() !!}
 
