@@ -77,6 +77,6 @@
     {!! Form::close() !!}
 
     <script>
-        CKEDITOR.replace( 'content' );
+        CKEDITOR.replace( 'content');
     </script>
 @endsection

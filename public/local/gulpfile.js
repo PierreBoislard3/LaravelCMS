@@ -29,14 +29,18 @@ elixir(function(mix) {
     mix.copy('node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js', elixir.config.publicPath+'/js/datepicker.js');
     mix.copy('node_modules/eonasdan-bootstrap-datetimepicker/src/sass/_bootstrap-datetimepicker.scss', elixir.config.publicPath+'/sass/datepicker.scss');
 
-    mix.copy('node_modules/simplemde/dist/simplemde.min.css', elixir.config.publicPath+'/css/simplemde.css');
-    mix.copy('node_modules/simplemde/dist/simplemde.min.js', elixir.config.publicPath+'/js/simplemde.js');
+    //CKeditor Import
     mix.copy('node_modules/ckeditor/ckeditor.js', elixir.config.publicPath+'/js/ckeditor/ckeditor.js');
     mix.copy('node_modules/ckeditor/config.js', elixir.config.publicPath+'/js/ckeditor/config.js');
+    mix.copy('node_modules/ckeditor/contents.css', elixir.config.publicPath+'/js/ckeditor/contents.css');
+    mix.copy('node_modules/ckeditor/styles.js', elixir.config.publicPath+'/js/ckeditor/styles.js');
+    mix.copy('node_modules/ckeditor/lang/', elixir.config.publicPath+'/js/ckeditor/lang/');
+    mix.copy('node_modules/ckeditor/plugins/', elixir.config.publicPath+'/js/ckeditor/plugins/');
+    mix.copy('node_modules/ckeditor/skins/', elixir.config.publicPath+'/js/ckeditor/skins/');
 
     mix.scripts([
         'jquery.js', 'bootstrap.js', 'moment.js',
-        'simplemde.js', 'datepicker.js', 'ckeditor/ckeditor.js'
+        'datepicker.js', 'ckeditor/ckeditor.js'
     ]);
 
     mix.sass('backend.scss');
