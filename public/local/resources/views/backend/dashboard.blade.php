@@ -10,7 +10,7 @@
                     <li class="list-group-item">
                         <h4>
                             <a href="#">{{ $post->title }}</a>
-                            <a href="{{ route('backend.blog.edit', $post->id) }}" class="pull-right">
+                            <a href="{{ route('backend.post.edit', $post->id) }}" class="pull-right">
                                 <span class="glyphicon glyphicon-edit"></span>
                             </a>
                         </h4>

@@ -89,7 +89,7 @@ class BlogController extends Controller
 
         $post->fill($request->only('title', 'slug', 'published_at', 'body', 'excerpt'))->save();
 
-        return redirect(route('backend.blog.edit', $post->id))->with('status', 'Post has been updated.');
+        return redirect(route('backend.post.edit', $post->id))->with('status', 'Post has been updated.');
     }
 
     public function confirm($id)
