@@ -15,15 +15,10 @@ class UserTableSeeder extends Seeder
 
         DB::table('users')->insert([
             [
-                'name' => 'Bill',
-                'email' => 'bill@sundaysim.app',
-                'password' => bcrypt('secret')
-            ],
-            [
-                'name' => 'Mary',
-                'email' => 'mary@sundaysim.app',
-                'password' => bcrypt('secret')
-            ],
+                'name' => 'Admin',
+                'email' => 'pierre.boislard@edelman.com',
+                'password' => bcrypt('vagrant')
+            ]
         ]);
     }
 }

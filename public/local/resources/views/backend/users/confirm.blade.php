@@ -5,7 +5,7 @@
 @section('content')
     {!! Form::open(['method' => 'delete', 'route' => ['backend.users.destroy', $user->id]]) !!}
         <div class="alert alert-danger">
-            <strong>Warning!</strong> You are about to delete a user. This action cannot be undone. Are you sure you want to continue?
+            <strong>Warning!</strong> You are about to delete a user. All Posts from that user will be deleted. This action cannot be undone. Are you sure you want to continue?
         </div>
 
         {!! Form::submit('Yes, delete this user!', ['class' => 'btn btn-danger']) !!}

@@ -94,7 +94,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Requests\DeleteUserRequest $request, $id)
+    public function destroy($id)
     {
         $user = $this->users->findOrFail($id);
 
