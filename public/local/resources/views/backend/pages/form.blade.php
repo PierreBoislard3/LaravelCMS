@@ -72,6 +72,17 @@
         </label>
     </div>
 
+    <div class="form-group">
+        {!! Form::label('featured_image') !!}
+        <div class="fileinput fileinput-new" data-provides="fileinput" style="display:block;">
+            <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+            <div>
+                <span class="btn btn-default btn-file"><span class="fileinput-new">Select Featured Image</span><span class="fileinput-exists">Change</span>{!! Form::file('featured_image', ['class' => 'form-control']) !!}</span>
+                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+            </div>
+        </div>
+    </div>
+
     {!! Form::submit($page->exists ? 'Save Page' : 'Create New Page', ['class' => 'btn btn-primary']) !!}
 
     {!! Form::close() !!}
