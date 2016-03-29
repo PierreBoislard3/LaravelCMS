@@ -13,7 +13,6 @@ public/local/bootstrap/compiled.php
 public/local/app/storage/
 
 # Laravel 5 & Lumen specific
-public/local/bootstrap/cache/
 public/local/storage/
 public/local/.env.*.php
 public/local/.env.php
